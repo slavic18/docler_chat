@@ -1,0 +1,43 @@
+.button {
+  border-radius: none;
+  border: none;
+  box-shadow: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #212529;
+  background-color: #f8f9fa;
+  border: 1px solid;
+  border-color: #b2b3b4;
+  &:disabled {
+    background: #606060;
+    color: #ffffff;
+    cursor: not-allowed;
+    &:focus,
+    &:active,
+    &:hover  {
+      background: #606060;
+    }
+  }
+  &:focus, &:active {
+    outline: none;
+  }
+  &:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5
+  }
+  &.button__big {
+    padding: 10px 15px;
+  }
+  &.button__fullwidth {
+    width: 100%;
+  }
+}
+
+// styles for dark theme
+.button {
+  .theme--dark & {
+    color:rgb(191, 191, 191);
+    background: #232B30;
+  }
+}

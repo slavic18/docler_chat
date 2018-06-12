@@ -1,0 +1,8 @@
+// styles for dark theme
+.form--input {
+  .theme--dark & {
+    background: transparent;
+    border: 1px solid #919191;
+    color: rgb(191, 191, 191);
+  }
+}

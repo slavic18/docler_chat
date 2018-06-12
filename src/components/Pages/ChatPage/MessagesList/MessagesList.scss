@@ -1,0 +1,39 @@
+.container--chat--messages {
+  padding-bottom: 55px;
+  height: 100%;
+  background-color: #fff;
+  .chat--messages {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+// animation for new messages
+.messages--list--animation-enter {
+  opacity: 0.01;
+}
+
+.messages--list--animation-enter.messages--list--animation-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.messages--list--animation-leave {
+  opacity: 1;
+}
+
+.messages--list--animation-leave.messages--list--animation-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+// styles for dark theme
+.container--chat--messages {
+  .theme--dark & {
+    background: #22272B;
+  }
+}

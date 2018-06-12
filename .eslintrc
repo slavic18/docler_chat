@@ -1,0 +1,23 @@
+{
+    "parser": "babel-eslint",
+    "plugins": [
+        "react"
+    ],
+    "env": {
+        "browser": true,
+        "mocha": true
+    },
+    "extends": "airbnb",
+    "rules": {
+        "max-len": ["error", 120, { "tabWidth": 2 }],
+        "func-names": ["error", "never"],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "no-mixed-operators": [
+            "off"
+        ],
+        "jsx-a11y/anchor-is-valid": [
+            "off"
+        ],
+        "object-curly-newline": ["error", { "consistent": true }]
+    }
+}

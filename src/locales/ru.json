@@ -1,0 +1,18 @@
+{
+  "Language": "Язык",
+  "Write a message": "Написать сообщение",
+  "User name": "Имя пользователя ",
+  "write your name": "Введите своё имя",
+  "Reset to defaults": "Востановить по умолчанию",
+  "Interface color": "Цветовая тема",
+  "Clock display": "Формат даты",
+  "Light": "Светлая",
+  "Dark": "Тёмная",
+  "On": "Включить",
+  "Off": "Выключить",
+  "12 Hours": "12 часов",
+  "24 Hours": "24 часов",
+  "Send message on CTRL+ENTER": "Отправлять сообщение при CTRL+ENTER",
+  "Chat": "Чат",
+  "Settings": "Настройки"
+}

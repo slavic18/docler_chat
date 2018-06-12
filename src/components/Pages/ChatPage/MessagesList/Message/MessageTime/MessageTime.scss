@@ -1,0 +1,11 @@
+.message__time {
+  display: block;
+  font-size: 10px;
+  color: #b9bcc0;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+  .comment--container__me & {
+    float: right;
+  }
+}
