@@ -9,7 +9,7 @@ export const formatDate = (date, format) => {
   let hours = dateObj.getHours();
   let minutes = dateObj.getMinutes();
   if (format === '12') {
-    const amPM = (hour > 11) ? "pm" : "am";
+    const amPM = (hours > 11) ? "pm" : "am";
     if (hours > 12) {
       hours -= 12;
     } else if (hours === 0) {
