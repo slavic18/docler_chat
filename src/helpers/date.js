@@ -19,7 +19,7 @@ export const formatDate = (date, format) => {
       minutes = "0" + minutes;
     }
 
-    return `${hours}:${minute} ${amPM}`;
+    return `${hours}:${minutes} ${amPM}`;
   }
   return `${hours}:${minutes}`;
 };

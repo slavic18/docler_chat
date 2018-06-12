@@ -37,9 +37,19 @@ class SendMessageForm extends React.Component {
     const ENTER_KEY_CODE = 13;
     const currentKeyCode = (e.keyCode || e.which);
     const isCtrlButtonPressed = e.ctrlKey;
-    if (currentKeyCode === ENTER_KEY_CODE && sendMessageOnCtrlEnter && isCtrlButtonPressed) {
+    const isShiftButtonPressed = e.shiftKey;
+    const isEnterButtonPressed = currentKeyCode === ENTER_KEY_CODE;
+
+    if (isEnterButtonPressed && !(isCtrlButtonPressed || isShiftButtonPressed)) {
       this.handleSubmit(e);
+    } else if (isEnterButtonPressed && sendMessageOnCtrlEnter && isCtrlButtonPressed) {
+      this.handleSubmit(e);
+    } else if (isEnterButtonPressed && !sendMessageOnCtrlEnter && isCtrlButtonPressed) {
+      // insert new line on ctrl + enter click
+      document.execCommand('insertHTML', false, isCtrlButtonPressed ? '<br><br>' : '<br>');
     }
+
+    return e;
   };
 
   handleSubmit = (e) => {
@@ -51,7 +61,7 @@ class SendMessageForm extends React.Component {
 
     this.setState({message: ''});
     this.textareaRef.innerHTML = '';
-    this.sendMessage(this.state.message);
+    this.sendMessage(value);
   };
 
 
@@ -69,7 +79,7 @@ class SendMessageForm extends React.Component {
   };
 
   /**
-   * paste text without formatting
+   * paste text without html tags
    * @param e {event}
    */
   onPaste = (e) => {

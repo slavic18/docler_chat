@@ -2,6 +2,8 @@
 
 ## How to use
 
+You can see the [demo](http://simple-react-redux-chat.herokuapp.com) here.
+
 ```bash
 # First, in your terminal, install dependencies 
 $ npm install
